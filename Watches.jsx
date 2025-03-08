@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./Laptops.css";
 import axios from "axios";
 
-const Mobiles=()=>{
+const Watches=()=>{
     const [laptops,setLaptops]=useState([]);
     const get_laptops = async()=>{
-        const res = await axios.get("http://localhost:9001/mobiles");
+        const res = await axios.get("http://localhost:9001/watches");
         const {data} = res;
         setLaptops(data);
 
@@ -32,4 +32,4 @@ const Mobiles=()=>{
     )
 }
 
-export default Mobiles;
+export default Watches;
